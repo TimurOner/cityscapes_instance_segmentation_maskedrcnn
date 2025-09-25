@@ -5,9 +5,9 @@ This repo contains training code and training steps for finetuning of Masked R-C
 
 
 ## Inference Examples
-![Alt text](inferece_examples/inf1.png)
-![Alt text](inferece_examples/inf2.png)
-![Alt text](inferece_examples/inf3.png)
+![Alt text](inference_examples/inf1.png)
+![Alt text](inference_examples/inf2.png)
+![Alt text](inference_examples/inf3.png)
 
 
 
