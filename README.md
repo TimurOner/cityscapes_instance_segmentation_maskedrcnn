@@ -1,5 +1,5 @@
 ## General Description 📝
-This repo contains training code and training steps for finetuning of Masked R-CNN to the Cityscapes dataset. 
+This repo contains training code and training steps for finetuning of Masked R-CNN to the Cityscapes dataset. Cityscapes is a dataset that consists of urban scenes from diverse German cities and provides a good benchmark for instance segmentation/object detection models. 
 
 ## Dataset Description 🗂️
 Details about the Cityscapes dataset, preprocessing steps, and organization.
