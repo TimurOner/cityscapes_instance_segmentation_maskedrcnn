@@ -24,14 +24,17 @@ straints, we used only 4120 coarsely annotated images.
 ![Alt text](images/size_dist_objects.png)
 ![Alt text](images/class_dist_objects.png)
 
-## The Training Procedure ⚙️
+## The Training Procedure 
 Explanation of the model architecture, hyperparameters, and training steps.
+![Alt text](images/hyperparams_selected.png)
 
 ## Overcomed Issues 🛠️
 Challenges faced during training and how they were resolved.
 
 ## The Final Test Set Metrics 📊
 Evaluation results, metrics (mIoU, accuracy), and visualizations.
+![Alt text](images/performance_table.png)
+
 
 ## Future Projects 🚀
 Planned improvements, extensions, or experiments for this project.
