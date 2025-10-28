@@ -26,10 +26,14 @@ straints, we used only 4120 coarsely annotated images.
 
 ## The Training Procedure 
 Explanation of the model architecture, hyperparameters, and training steps.
-![Alt text](images/hyperparams_selected.png)
+
 
 ## Overcomed Issues 🛠️
-Challenges faced during training and how they were resolved.
+
+1. The training and testing data consists of high-quality RGB images (1024x2048px). While having such high quality data is great for better generalization, it also increases size of each training sample. Such a      RGB image typically has size of about 25mb. Having such large limits the size of each batch during training, makes training and inference considerably slower and potentially requires high RAM/disc capacities      for storage and manipulation. Even though a batch with size of 4 appears to have only 100mb of size, if we consider the model weights, gradients and activation the required amount of VRAM easlity reaches 12-15
+   GB. Since the training was done on a Nvidia L4, the highest batch size we could afford was 4. 
+    
+   
 
 ## The Final Test Set Metrics 📊
 Evaluation results, metrics (mIoU, accuracy), and visualizations.
