@@ -21,6 +21,9 @@ lic labels, so they were excluded from training. The coarse
  R-CNN implementation. Due to storage and memory con
 straints, we used only 4120 coarsely annotated images.
 
+![Alt text](images/size_distribution.png)
+![Alt text](images/class_distrbution.png)
+
 ## The Training Procedure ⚙️
 Explanation of the model architecture, hyperparameters, and training steps.
 
