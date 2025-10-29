@@ -34,11 +34,15 @@ lic labels, so they were excluded from training. The coarse
  R-CNN implementation. Due to storage and memory con
 straints, we used only 4120 coarsely annotated images.
 
+The 2975 instance annotated images were split into 8 partitions. 4 of these partitions were used for trainin in stages 1 and 2. The next 2 partitoons
+were used for validation loss monitoring and early stopping during training stages 1&2 and the validation set for hyperparameter selection procedure. The 
+last 2 partitons were kept untouched during all of the training and hyperparamter selection process and were exclusivelly used to obtain the final test set score.
+
 ![Alt text](images/size_dist_objects.png)
 ![Alt text](images/class_dist_objects.png)
 
 ## The Training Procedure 
-The training was done in 3 stages on a Nvidia L4 gpu in Colab environment. 
+The training was done in 3 stages on a Nvidia L4 gpu in Colab environment. Full tra
 
 **Stage 0 – Backbone Pre-training**  
 - Initialized ResNet50 backbone with DeepLabv3 weights for richer feature representations.  
@@ -55,8 +59,9 @@ The training was done in 3 stages on a Nvidia L4 gpu in Colab environment.
 - Best configuration applied; model trained for 6 epochs with backbone frozen.  
 
 **Stage 3 – Final Refinement**  
-- Fully unfroze the network and trained on validation partitions to let all components adapt to each other.  
-- Learning rate reduced by factor of 10 to prevent overfitting.  
+- Fully unfroze the network and trained on validation partitions to let all components adapt to each other with the best hyperparameters obtained in Stage 2.
+- Learning rate reduced by factor of 10  and trained only for 2 epochs to prevent overfitting of the backbone to the dataset specific features. Also included partition
+  of the dataset that was used in validation loss monitoring during stages 1&2 and hyperparameter tuning for training to obtain the final boost.
 
 ## Challenges Encountered 🛠️
 
