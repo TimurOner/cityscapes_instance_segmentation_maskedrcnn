@@ -13,7 +13,7 @@ Original file is located at
 
 # Standard Library
 import sys,re,os
-import random
+import math,random
 import cv2
 import numpy as np
 import pandas as pd
