@@ -27,6 +27,23 @@ straints, we used only 4120 coarsely annotated images.
 ## The Training Procedure 
 The training was done in 3 stages on a Nvidia L4 gpu in Colab environment. 
 
+**Stage 0 – Backbone Pre-training**  
+- Initialized ResNet50 backbone with DeepLabv3 weights for richer feature representations.  
+- Pre-trained on 4,120 semantically annotated images from Cityscapes train-extra for 12 epochs using cross-entropy loss and Adam optimizer.  
+- ReduceLROnPlateau scheduler used; convergence not fully reached due to compute limits.  
+
+**Stage 1 – FPN & Head Training**  
+- Backbone frozen; trained FPN, RPN, RoIAlign, and heads on full training set (2,975 images) for 4 epochs.  
+- Minimal fine-tuning; unfreezing the backbone caused overfitting.  
+
+**Stage 2 – Hyperparameter Tuning & Training**  
+- Tuned key hyperparameters with Optuna on a reduced subset: foreground IoU threshold, RPN positive/negative IoU thresholds, and FPN gradient flow.  
+- Anchors adapted via k-means clustering on bounding boxes.  
+- Best configuration applied; model trained for 6 epochs with backbone frozen.  
+
+**Stage 3 – Final Refinement**  
+- Fully unfroze the network and trained on validation partitions to let all components adapt to each other.  
+- Learning rate reduced by factor of 10 to prevent overfitting.  
 
 ## Challenges Encountered 🛠️
 
