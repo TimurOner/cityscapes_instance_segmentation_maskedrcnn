@@ -1,5 +1,17 @@
+
+
 ## General Description 📝
 This repo contains training code and training steps for finetuning of Masked R-CNN to the Cityscapes dataset. Cityscapes is a dataset that consists of urban scenes from diverse German cities and provides a good benchmark for instance segmentation/object detection models. We have selected Masked R-CNN for this task for educational purposes - Masked R-CNN is a foundational model for newer and stronger implementations and demonstrates lots of key computer vision concepts such as backbone extracted features, non-maximum supression, region proposal network (RPN) and mask head. We have reached test set mAP that is below SOTA but is respectable considering that Masked R-CNN is almost 10 years old.
+
+This project was done by Ben Sebastian Attias and Timur Oner for course Vision and Cognition Systems 2024/2025@UniPD.
+
+Coding And Data Preparation - Timur Oner
+Project Idea And Experiment Design - Timur Oner and Ben Attias
+Compuet and Storage Costs - Timur Oner And Ben Attias
+Final Report - Timur Oner and Ben Attias
+Repo Organization - Timur Oner
+Final Presentation - Timur Oner and Ben Attias
+
 ## Dataset Description 🗂️
 We use the Cityscapes dataset [4], a large-scale dataset
  that contains diverse urban scenes from various German
