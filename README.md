@@ -64,8 +64,8 @@ Evaluation results, metrics (mIoU, accuracy), and visualizations.
 
 
 ## Future Projects 🚀
-Planned improvements, extensions, or experiments for this project.
 
+For future, experimentation with SOTA architectures and trying new techniques to drammatically reduce VRAM and trainin time requirements while keeping test set performance high is planned. Another interesting angle worth exploring is being able to prune and compress computer vision models for edge operation. My next implementation will probably explore how to deploy SOTA models using less memory possibl and exploring new inference techniques to achieve real time image segmentation without compromising the accuracy and precision much. 
 
 
 ## Inference Examples
