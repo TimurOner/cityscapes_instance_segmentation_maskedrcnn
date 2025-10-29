@@ -74,6 +74,8 @@ For future, experimentation with SOTA architectures and trying new techniques to
 ![Alt text](inference_examples/inf3.png)
 
 
+[1] Tang, C., Chen, H., Li, X., Li, J., Zhang, Z., & Hu, X. (Year). Look closer to segment better: Boundary patch refinement for instance segmentation. State Key Laboratory of Intelligent Technology and Systems, THU-Bosch JCML Center.
+[2] Xiong, Y., Liao, R., Zhao, H., Hu, R., Bai, M., Yumer, E., & Urtasun, R. (2019). UPSNet: A Unified Panoptic Segmentation Network. CVPR 2019.
 
 
 
