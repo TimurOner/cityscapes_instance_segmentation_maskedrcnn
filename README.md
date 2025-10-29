@@ -59,7 +59,7 @@ The training was done in 3 stages on a Nvidia L4 gpu in Colab environment.
    
 
 ## The Final Test Set Metrics 📊
-Evaluation results, metrics (mIoU, accuracy), and visualizations.
+In the table below the test set metrics after each training stage is displayed along with 2 examples of recent instance segmentation models. Since the motive of this project was more educational and exploratory and we used a much older implementation this gap is expected. 
 ![Alt text](images/performance_table.png)
 
 
