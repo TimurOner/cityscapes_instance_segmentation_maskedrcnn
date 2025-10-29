@@ -81,6 +81,8 @@ The training was done in 3 stages on a Nvidia L4 gpu in Colab environment. Full 
 In the table below the test set metrics after each training stage is displayed along with 2 examples of recent instance segmentation models. Since the motive of this project was more educational and exploratory and we used a much older implementation this gap is expected. 
 ![Alt text](images/performance_table.png)
 
+To compare performance of Masked R-CNN with newer implentations we also test set performance of Deep Watershed Transform and 2 newer implementations - PolyTransform + SegFix + BPR and UPSnet. The benchmark
+scores were taken from 'cityscapes-dataset.com/benchmarks/'. Mask R-CNN outperforms earlier methods like Deep Watershed Transform partly due to its two-stage design, which separates region proposal from mask refinement, combined with end-to-end training and multi-task learning.
 
 ## Future Projects 🚀
 
@@ -93,9 +95,13 @@ For future, experimentation with SOTA architectures and trying new techniques to
 ![Alt text](inference_examples/inf3.png)
 
 
-[1] Tang, C., Chen, H., Li, X., Li, J., Zhang, Z., & Hu, X. (Year). Look closer to segment better: Boundary patch refinement for instance segmentation. State Key Laboratory of Intelligent Technology and Systems, THU-Bosch JCML Center.
+[1] Bai, M., & Urtasun, R. (2017). *Deep Watershed Transform for Instance Segmentation.* Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR). [arXiv:1611.08303](https://arxiv.org/abs/1611.08303)
 
-[2] Xiong, Y., Liao, R., Zhao, H., Hu, R., Bai, M., Yumer, E., & Urtasun, R. (2019). UPSNet: A Unified Panoptic Segmentation Network. CVPR 2019.
+[2] Tang, C., Chen, H., Li, X., Li, J., Zhang, Z., & Hu, X. (Year). Look closer to segment better: Boundary patch refinement for instance segmentation. State Key Laboratory of Intelligent Technology and Systems, THU-Bosch JCML Center.
+
+[3] Xiong, Y., Liao, R., Zhao, H., Hu, R., Bai, M., Yumer, E., & Urtasun, R. (2019). UPSNet: A Unified Panoptic Segmentation Network. CVPR 2019.
+
+
 
 
 
