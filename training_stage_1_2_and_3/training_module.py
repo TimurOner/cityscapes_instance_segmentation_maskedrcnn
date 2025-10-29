@@ -1651,19 +1651,14 @@ def analyze_optuna_study(study):
 
 
 
-def plot_learning_curves(checkpoint_path, name="Learning Curve", legacy_checkpoint=False):
+def plot_learning_curves(checkpoint_path, name="Learning Curve"):
     # Load checkpoint
     checkpoint = torch.load(checkpoint_path, map_location="cpu")
 
-    # Handle legacy vs new checkpoints
-    if legacy_checkpoint:
-        train_losses = [1.8902, 1.6821, 1.5692, 1.4875]
-        val_losses = [1.7815, 1.5845, 1.4906, 1.4360]
-        val_maps = None
-    else:
-        train_losses = checkpoint["train_losses"]
-        val_losses = checkpoint["val_losses"]
-        val_maps = checkpoint["val_maps"]
+
+    train_losses = checkpoint["train_losses"]
+    val_losses = checkpoint["val_losses"]
+    val_maps = checkpoint["val_maps"]
 
     epochs = list(range(1, len(train_losses) + 1))  # ensure list of ints
 
