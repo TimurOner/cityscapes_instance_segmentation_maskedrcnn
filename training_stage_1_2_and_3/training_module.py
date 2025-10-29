@@ -494,8 +494,7 @@ def train_epoch_alpha_mixed_precision(
     pruning=True, trial=None, checkpoint_save_path="./checkpoints", load_checkpoint=False,
     validate_only_last=False
 ):
-    import os
-    import math
+
 
     os.makedirs(checkpoint_save_path, exist_ok=True)
     scaler = GradScaler()
